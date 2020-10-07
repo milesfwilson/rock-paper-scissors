@@ -11,21 +11,27 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/e5c7f27a7a.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="bootstrap.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body class="container-fluid">
-  <header class="row bg-dark text-light">
-    <div class="col-12 text-center my-auto p-3">
-      <h1>Rock, Paper, Scissors</h1>
+  <header class="row bg-dark">
+    <div class=" col-12 my-auto p-3 d-flex justify-content-center">
+      <div class="d-flex">
+        <i class="fas fa-dice-d6 fa-3x text-light"></i>
+        <h1 class="ml-3 text-light my-auto">rps.</h1>
+      </div>
     </div>
   </header>
-  <main>
-    <div class="row h-75 my-5 p-5 bg-light text-dark text-center">
+  <main class="overflow-hidden">
+    <div class="row h-75 my-5 p-5 bg-light text-dark text-center slide">
 
-      <div class="col-2"></div>
-      <div class="col-4">
-        <div class="card shadow-lg p-3 corners">
+      <div class="col-md-2 col-12"></div>
+      <div class="col-md-4 col-12">
+        <div class="card p-3 corners" id="player-box">
 
           <h3 id="player-name">You</h3>
           <div id="player-choice" class="m-5"></div>
@@ -33,44 +39,47 @@
         </div>
       </div>
 
-      <div class="col-4">
-        <div class="card shadow-lg p-3 corners">
+      <div class="col-md-4 col-12">
+        <div class="card p-3 corners" id="computer-box">
           <h3>Computer</h3>
           <div id="computer-choice" class="m-5"></div>
           <h3 id="computer-score">-</h3>
         </div>
       </div>
-      <div class="col-2"></div>
+      <div class="col-md-2 col-12"></div>
     </div>
 
-    <div class="row my-5">
-      <div class="col-3"></div>
-      <div class="col-2">
-        <button class="btn btn-dark corners btn-block shadow" id="rock" onclick="play('ROCK')">Rock</button>
+    <div class="row my-5 slide">
+      <div class="col-md-3 col-12"></div>
+      <div class="col-md-2 col-12">
+        <button class="btn btn-primary corners btn-block my-3" id="rock" onclick="play('ROCK')">Rock</button>
       </div>
-      <div class="col-2">
-        <button class="btn btn-dark corners btn-block shadow" id="paper" onclick="play('PAPER')">Paper</button>
+      <div class="col-md-2 col-12">
+        <button class="btn btn-primary corners btn-block my-3" id="paper" onclick="play('PAPER')">Paper</button>
+        <button class="btn btn-success corners hidden btn-block my-3" id="reset-game" onclick="resetGame()">Play
+          Again</button>
       </div>
-      <div class="col-2">
-        <button class="btn btn-dark corners btn-block shadow" id="scissors" onclick="play('SCISSORS')">Scissors</button>
+      <div class="col-md-2 col-12">
+        <button class="btn btn-primary corners btn-block my-3" id="scissors"
+          onclick="play('SCISSORS')">Scissors</button>
       </div>
-      <div class="col-3"></div>
+      <div class="col-md-3 col-12"></div>
     </div>
 
-    <div class="row mt-5">
-      <div class="col-4"></div>
-      <div class="col-4">
-        <div class="card shadow-lg py-3 my-5 text-light bg-dark text-center">
-          <h3>Ready, shoot!</h3>
+    <div class="row mt-5 slide">
+      <div class="col-md-4 col-12"></div>
+      <div class="col-md-4 col-12">
+        <div class="card shadow-lg py-3 bg-dark text-center">
+          <h3 id="message-board" class="my-auto text-light">Ready, shoot!</h3>
         </div>
       </div>
-      <div class="col-4"></div>
+      <div class="col-md-4 col-12"></div>
 
     </div>
 
   </main>
 
-  <footer class="row bg-dark text-light">
+  <footer class="row bg-dark text-light mt-3">
     <div class="col-12 text-center">
       <p class="my-auto p-4">Made with love and intention by Miles F. Wilson</p>
     </div>

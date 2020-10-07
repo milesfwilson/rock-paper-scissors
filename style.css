@@ -12,7 +12,43 @@ main{
 footer { 
 
 }
+
+.winner-glow {
+  box-shadow: 0 1rem 3rem rgba(0, 140, 255, 0.356)
+}
+
+.loser-glow {
+  box-shadow: 0 1rem 3rem rgba(255, 17, 0, 0.356)
+}
+
 /* 
 * {
   outline: 1px solid black;
 } */
+
+.slide {
+  animation-duration: 3s;
+  animation-name: slidein;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+
+.hidden {
+  display: none !important;
+}
+
