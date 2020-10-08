@@ -1,17 +1,12 @@
 body { 
   min-height: 100vh; display: flex; flex-direction: column; 
 }
-header { 
-
-} 
 
 main{
   flex-grow: 1;
 } 
 
-footer { 
 
-}
 
 .winner-glow {
   box-shadow: 0 1rem 3rem rgba(0, 140, 255, 0.356)
